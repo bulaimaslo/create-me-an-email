@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 export async function getGPT3Response(prompt: string) {
   const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: process.env.OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 
